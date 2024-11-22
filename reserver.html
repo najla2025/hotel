@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reserver</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.pinimg.com/474x/71/66/22/7166224b95d9b7f229367e9fe1a8ce08.jpg" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>       
+                  <h1>Bienvenue à l'Hôtel de Luxe</h1>
+
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="chambre.html">Chambre & Suites</a></li>
+                <li><a href="bar.html">Bar & Petit Déjeuner</a></li>
+                <li><a href="spa.html">Spa</a></li>
+                <li><a href="galerie.html">Galerie Photos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <button class="btn-reservation"> <a href="reserver.html">Réserver</button></a>
+
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section class="reservation-section">
+        <h2>Réservez votre séjour</h2>
+
+        <!-- Formulaire de réservation -->
+
+       <form id="reservation-form">
+            <label for="chambre">Type de Chambre :</label>
+            <select id="chambre" name="chambre" required>
+                <option value="simple">Chambre familiale</option>
+                <option value="double">Chambre Double</option>
+                <option value="double">Chambre Double superieure</option>
+                <option value="simple">Junior suite</option>
+                <option value="suite">Suite</option>
+            </select>
+            
+            <label for="arrivee">Date d'Arrivée :</label>
+            <input type="date" id="arrivee" name="arrivee" required>
+            
+            <label for="depart">Date de Départ :</label>
+            <input type="date" id="depart" name="depart" required>
+            
+            <label for="adultes">Nombre d'adultes :</label>
+            <input type="number" id="adultes" name="adultes" min="1" required>
+            
+            <label for="enfants">Nombre d'enfants :</label>
+            <input type="number" id="enfants" name="enfants" min="0" required>
+            <label for="spa">Accès au Spa :</label>
+            <input type="checkbox" id="spa" name="spa">
+
+            
+            <label for="bar">Accès au Bar :</label>
+            <input type="checkbox" id="bar" name="bar">
+
+            <label for="bar">Accès au Petit Déjeuner :</label>
+            <input type="checkbox" id="Petit Déjeuner" name="Petit Déjeuner">
+            <div class="payment-options">
+                <p><strong>Mode de Paiement :</strong></p>
+                <label>
+                    <input type="radio" id="payment-card" name="payment" value="Carte" required>
+                    Carte bancaire
+                </label>
+                <label>
+                    <input type="radio" id="payment-cash" name="payment" value="Espèces">
+                    Espèces
+                </label>
+            </div>
+            
+            <button id="btnReserver" type="button">Réserver</button>
+        </form> 
+        <p id="response-message"></p>
+  
+        
+    </section>
+     
+
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
